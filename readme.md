@@ -24,6 +24,9 @@
     </a>
     <br />
     <br />
+    <a href="https://vercel.com?utm\_source=github\_readme\_stats\_team\&utm\_campaign=oss">
+      <img src="./powered-by-vercel.svg"/>
+    </a>
   </p>
 
   <p align="center">
@@ -106,7 +109,7 @@ Please visit [this link](https://give.do/fundraisers/stand-beside-the-victims-of
     - [Pie Chart Language Card Layout](#pie-chart-language-card-layout)
     - [Hide Progress Bars](#hide-progress-bars)
     - [Demo](#demo-2)
-- [Wakatime Stats Card](#wakatime-stats-card)
+- [WakaTime Stats Card](#wakatime-stats-card)
     - [Demo](#demo-3)
 - [All Demos](#all-demos)
   - [Quick Tip (Align The Cards)](#quick-tip-align-the-cards)
@@ -118,10 +121,15 @@ Please visit [this link](https://give.do/fundraisers/stand-beside-the-victims-of
   - [Keep your fork up to date](#keep-your-fork-up-to-date)
 - [:sparkling\_heart: Support the project](#sparkling_heart-support-the-project)
 
-# Important Notice <!-- omit in toc -->
+# Important Notices <!-- omit in toc -->
 
 > [!IMPORTANT]\
 > Since the GitHub API only [allows 5k requests per hour per user account](https://docs.github.com/en/graphql/overview/resource-limitations), the public Vercel instance hosted on `https://github-readme-stats.vercel.app/api` could possibly hit the rate limiter (see [#1471](https://github.com/anuraghazra/github-readme-stats/issues/1471)). We use caching to prevent this from happening (see https://github.com/anuraghazra/github-readme-stats#common-options). You can turn off these rate limit protections by deploying [your own Vercel instance](#disable-rate-limit-protections).
+
+<img alt="Uptime Badge" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fgithub-readme-stats-git-monitoring-github-readme-stats-team.vercel.app%2Fapi%2Fstatus%2Fup%3Ftype%3Dshields">
+
+> [!IMPORTANT]\
+> We're a small team, and to prioritize, we rely on upvotes :+1:. We use Top issues dashboard for tracking community demand (see [#1935](https://github.com/anuraghazra/github-readme-stats/issues/1935)). Do not hesitate to upvote the issues and pull requests you are interested in. We will work on the most upvoted first.
 
 # GitHub Stats Card
 
@@ -137,7 +145,7 @@ Change the `?username=` value to your GitHub username.
 > By default, the stats card only shows statistics like stars, commits and pull requests from public repositories. To show private statistics on the stats card, you should [deploy your own instance](#deploy-on-your-own) using your own GitHub API token.
 
 > [!NOTE]\
-> Available ranks are S (top 1%), A+ (12.5%), A (25%), A- (37.5%), B+ (50%), B (62.5%), B- (75%), C+ (87.5%) and C (everyone). This ranking scheme is based on the [Japanese academic grading](https://wikipedia.org/wiki/Academic_grading_in_Japan) system. The global percentile is calculated as a weighted sum of percentiles for each statistic (number of commits, pull requests, reviews, issues, stars and followers), based on the cumulative distribution function of the [exponential](https://wikipedia.org/wiki/exponential_distribution) and the [log-normal](https://wikipedia.org/wiki/Log-normal_distribution) distributions. The implementation can be investigated at [src/calculateRank.js](src/calculateRank.js). The circle around the rank shows 100 minus the global percentile.
+> Available ranks are S (top 1%), A+ (12.5%), A (25%), A- (37.5%), B+ (50%), B (62.5%), B- (75%), C+ (87.5%) and C (everyone). This ranking scheme is based on the [Japanese academic grading](https://wikipedia.org/wiki/Academic_grading_in_Japan) system. The global percentile is calculated as a weighted sum of percentiles for each statistic (number of commits, pull requests, reviews, issues, stars and followers), based on the cumulative distribution function of the [exponential](https://wikipedia.org/wiki/exponential_distribution) and the [log-normal](https://wikipedia.org/wiki/Log-normal_distribution) distributions. The implementation can be investigated at [src/calculateRank.js](https://github.com/anuraghazra/github-readme-stats/blob/master/src/calculateRank.js). The circle around the rank shows 100 minus the global percentile.
 
 ### Hiding individual stats
 
@@ -183,7 +191,7 @@ GitHub Readme Stats comes with several built-in themes (e.g. `dark`, `radical`, 
 
 <img src="https://res.cloudinary.com/anuraghazra/image/upload/v1595174536/grs-themes_l4ynja.png" alt="GitHub Readme Stats Themes" width="600px"/>
 
-You can look at a preview for [all available themes](themes/README.md) or checkout the [theme config file](themes/index.js). You can also contribute new themes if you like, contributing guidelines can be found [here](CONTRIBUTING.md#themes-contribution).
+You can look at a preview for [all available themes](themes/README.md) or checkout the [theme config file](themes/index.js). Please note that we paused addition of new themes to decrease maintenance efforts, all pull requests related to new themes will be closed.
 
 #### Responsive Card Theme
 
@@ -352,7 +360,7 @@ Here is a list of all available locales:
 </td></tr>
 </table>
 
-If we don't support your language, please consider contributing!
+If we don't support your language, please consider contributing! You can find more information about how to do it in our [contributing guidelines](CONTRIBUTING.md#translations-contribution).
 
 #### Stats Card Exclusive Options
 
@@ -402,13 +410,13 @@ If we don't support your language, please consider contributing!
 > (i.e: `c++` should become `c%2B%2B`, `jupyter notebook` should become `jupyter%20notebook`, etc.) You can use
 > [urlencoder.org](https://www.urlencoder.org/) to help you do this automatically.
 
-#### Wakatime Card Exclusive Options
+#### WakaTime Card Exclusive Options
 
 *   `hide` - Hides the languages specified from the card *(Comma-separated values)*. Default: `[] (blank array)`.
 *   `hide_title` - *(boolean)*. Default `false`.
 *   `line_height` - Sets the line height between text *(number)*. Default `25`.
 *   `hide_progress` - Hides the progress bar and percentage *(boolean)*. Default `false`.
-*   `custom_title` - Sets a custom title for the card *(string)*. Default `Wakatime Stats`.
+*   `custom_title` - Sets a custom title for the card *(string)*. Default `WakaTime Stats`.
 *   `layout` - Switches between two available layouts `default` & `compact`.  Default `default`.
 *   `langs_count` - Limits the number of languages on the card, defaults to all reported languages *(number)*.
 *   `api_domain` - Sets a custom API domain for the card, e.g. to use services like [Hakatime](https://github.com/mujx/hakatime) or [Wakapi](https://github.com/muety/wakapi) *(string)*. Default `Waka API`.
@@ -593,26 +601,26 @@ You can use the `&hide_progress=true` option to hide the percentages and the pro
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra\&hide_progress=true)
 
-# Wakatime Stats Card
+# WakaTime Stats Card
 
 > [!WARNING]\
-> Please be aware that we currently only show data from Wakatime profiles that are public. You therefore have to make sure that **BOTH** `Display code time publicly` and `Display languages, editors, os, categories publicly` are enabled.
+> Please be aware that we currently only show data from WakaTime profiles that are public. You therefore have to make sure that **BOTH** `Display code time publicly` and `Display languages, editors, os, categories publicly` are enabled.
 
-Change the `?username=` value to your [Wakatime](https://wakatime.com) username.
+Change the `?username=` value to your [WakaTime](https://wakatime.com) username.
 
 ```md
-[![Harlok's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)](https://github.com/anuraghazra/github-readme-stats)
+[![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)](https://github.com/anuraghazra/github-readme-stats)
 ```
 
 ### Demo
 
-![Harlok's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)
+![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)
 
-![Harlok's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs\&hide_progress=true)
+![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs\&hide_progress=true)
 
 *   Compact layout
 
-![Harlok's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs\&layout=compact)
+![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs\&layout=compact)
 
 ***
 
@@ -686,7 +694,7 @@ Choose from any of the [default themes](#themes)
 
 *   WakaTime card
 
-![Harlok's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)
+![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)
 
 ***
 
@@ -745,7 +753,7 @@ Since the GitHub API only allows 5k requests per hour, my `https://github-readme
 > Since [#58](https://github.com/anuraghazra/github-readme-stats/pull/58), we should be able to handle more than 5k requests and have fewer issues with downtime :grin:.
 
 > [!NOTE]\
-> If you are on the [Pro (i.e. paid)](https://vercel.com/pricing) Vercel plan, the [maxDuration](https://vercel.com/docs/concepts/projects/project-configuration#value-definition) value found in the [Vercel.json](vercel.json) can be increased when your Vercel instance frequently times out during the card request. You are advised to keep this value lower than `30` seconds to prevent high memory usage.
+> If you are on the [Pro (i.e. paid)](https://vercel.com/pricing) Vercel plan, the [maxDuration](https://vercel.com/docs/concepts/projects/project-configuration#value-definition) value found in the [vercel.json](https://github.com/anuraghazra/github-readme-stats/blob/master/vercel.json) can be increased when your Vercel instance frequently times out during the card request. You are advised to keep this value lower than `30` seconds to prevent high memory usage.
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/anuraghazra/github-readme-stats)
 
